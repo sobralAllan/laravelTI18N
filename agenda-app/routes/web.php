@@ -18,3 +18,8 @@ Route::get('/consultar', function(){
     return view('paginas/consultar');
 });
 
+
+//As rotas utilizando o padrão MVC
+Route::get('/cadastrar',[\App\Http\Controllers\registrarAtividadeController::class, 'index']);
+Route::get('/cadastrar/salvar', [\App\Http\Controllers\registrarAtividadeController::class,'store']);
+Route::get('/consultar',[\App\Http\Controllers\registrarAtividadeController::class, 'consultar']);

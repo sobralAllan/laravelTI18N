@@ -1,4 +1,5 @@
 <x-layout titulo="Consultar">
+    @csrf
     <table class="table">
         <thead><!--Cabeçalho da Tabela -->
             <tr>
@@ -9,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($ids as id)
+            @foreach($ids as $id)
             <tr>
                 <th scope="row">{{$id->id}}</th>
                 <td>{{$id->dataEvento}}</td>
