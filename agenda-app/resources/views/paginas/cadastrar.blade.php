@@ -11,7 +11,6 @@
             <input type="text" class="form-control" id="descricao" name="descricao">
         </div>
         <button  type="submit" class="btn btn-primary">Salvar</button>
-        <a class="btn btn-primary" href="#">Atualizar</a>
         <a class="btn btn-primary" href="consultar">Consultar</a>
     </form>
 </x-layout>

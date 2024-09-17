@@ -1,22 +1,22 @@
 <x-layout titulo="Editar">
-    <form action="" method="get">
+    <form action="../atualizar/{{$dado->id}}" method="get">
         <label> id </label>
-        <input type="number" id="id" name="id" value="" disabled required/>
+        <input type="number" id="id" name="id" value="{{$dado->id}}" disabled required/>
         <br><br>
 
         <label> Data: </label>
-        <input type="date" id="dataEvento" name="dataEvento" value="" required/>
+        <input type="date" id="dataEvento" name="dataEvento" value="{{$dado->dataEvento}}" required/>
         <br><br>
 
         <label> Descrição: </label>
-        <input type="text" id="descricao" name="descricao" value="" required/>
+        <input type="text" id="descricao" name="descricao" value="{{$dado->descricao}}" required/>
         <br><br>
 
         <button class="btn btn-primary" type="submit">Atualizar</button>  
         <!-- Botão Excluir com MODAL -->
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Excluir
-        </button>
+        </a>
 
         <!-- Janela do MODAL -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -27,11 +27,11 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                     </div>
                     <div class="modal-body">
-                        Tem certeza que deseja excluir o cliente: ?
+                        Tem certeza que deseja excluir o compromisso: {{$dado->id}} ?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-                        <a type="button" class="btn btn-primary" href="#">Sim</a>
+                        <a type="button" class="btn btn-primary" href="/excluir/{{$dado->id}}">Sim</a>
                     </div>
                 </div>
             <div>
